@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Snackit offers the best selection of delicious desserts. From ice creams to cakes, we have something for everyone!">
+  <meta property="og:title" content="Snackit - Delicious Desserts">
+  <meta property="og:image" content="images/og-image.jpg">
+  <title>Snackit - Desserts</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Snackit - Your Dessert Destination</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#" id="menu-toggle">Show Menu</a>
+      <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <!-- Carousel Section -->
+  <section class="carousel">
+    <div class="carousel-container">
+      <img src="images/ice-cream.jpg" alt="Ice Cream" class="carousel-item">
+      <img src="images/cake.jpg" alt="Cake" class="carousel-item">
+      <img src="images/falooda.jpg" alt="Falooda" class="carousel-item">
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu-section" style="display: none;">
+    <h2>Our Desserts Menu</h2>
+
+    <!-- Menu Items -->
+    <div class="menu-item" data-name="Ice Cream" data-price="70" data-image="images/ice-cream.jpg">
+      <img src="images/ice-cream.jpg" alt="Ice Cream">
+      <h3>Ice Cream</h3>
+      <p>₹70</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Falooda" data-price="180" data-image="images/falooda.jpg">
+      <img src="images/falooda.jpg" alt="Falooda">
+      <h3>Falooda</h3>
+      <p>₹180</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Fruit Salad" data-price="120" data-image="images/fruit-salad.jpg">
+      <img src="images/fruit-salad.jpg" alt="Fruit Salad">
+      <h3>Fruit Salad</h3>
+      <p>₹120</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Gulab Jamun" data-price="100" data-image="images/gulab-jamun.jpg">
+      <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+      <h3>Gulab Jamun</h3>
+      <p>₹100</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Ladoo" data-price="70" data-image="images/ladoo.jpg">
+      <img src="images/ladoo.jpg" alt="Ladoo">
+      <h3>Ladoo</h3>
+      <p>₹70</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Choconutty" data-price="120" data-image="images/choconutty.jpg">
+      <img src="images/choconutty.jpg" alt="Choconutty">
+      <h3>Choconutty</h3>
+      <p>₹120</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Cake" data-price="1050" data-image="images/cake.jpg">
+      <img src="images/cake.jpg" alt="Cake">
+      <h3>Cake</h3>
+      <p>₹1050</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="menu-item" data-name="Jalebi" data-price="80" data-image="images/jalebi.jpg">
+      <img src="images/jalebi.jpg" alt="Jalebi">
+      <h3>Jalebi</h3>
+      <p>₹80</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p>Total: ₹<span id="total-price">0</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal (Popup) -->
+  <div id="checkout-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-checkout">&times;</span>
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+  
+        <label for="address">Table NO:</label>
+        <input type="text" id="address" required>
+  
+       
+  
+        <button type="submit">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Snackit. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

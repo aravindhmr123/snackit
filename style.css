@@ -1,0 +1,332 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f3e1;
+  color: #080808;
+}
+
+/* Header */
+header {
+  background-color: #859ea7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #14b8ff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header nav {
+  margin-top: 15px;
+}
+
+header nav a {
+  color: white;
+  font-size: 1.1em;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Checkout Modal Styles */
+#checkout-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#checkout-modal .cart-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  width: 50%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+#checkout-modal h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff6347;
+}
+
+#checkout-modal .close-btn {
+  color: #aaa;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+#checkout-modal .close-btn:hover,
+#checkout-modal .close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Center the form */
+#checkout-modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center horizontally */
+  justify-content: center;
+  width: 100%;  /* Ensure the form takes full width */
+  text-align: center; /* Center the text of labels and inputs */
+}
+
+#checkout-modal form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  display: block;
+}
+
+#checkout-modal form input,
+#checkout-modal form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #080707;
+  width: 90%;
+  max-width: 350px; /* Limit the width for better readability */
+  display: block;
+}
+
+#checkout-modal form button {
+  background-color: #ff6347;
+  color: rgb(8, 8, 8);
+  padding: 12px 20px;  /* Reduced padding for a more compact button */
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 90%; /* Align the button with the form fields */
+  max-width: 350px; /* Match the button width with form fields */
+  margin-top: 15px;  /* Space between the button and input fields */
+}
+
+#checkout-modal form button:hover {
+  background-color: #ff4500;
+}
+
+/* Footer */
+footer {
+  background-color: #91a4b7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  color: #ff4500;
+}
+
+/* Carousel */
+.carousel {
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  margin: 30px auto;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 400px; /* Ensure height is defined for the carousel items */
+  object-fit: cover; /* Ensures the images maintain their aspect ratio and cover the area */
+}
+
+/* Menu Section */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px 50px;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item img:hover {
+  transform: scale(1.1);
+}
+
+.menu-item h3 {
+  font-size: 1.4em;
+  color: #ff6347;
+  margin-top: 15px;
+}
+
+.menu-item p {
+  font-size: 1.1em;
+  color: #ff6347;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+}
+
+/* Cart Modal Styles */
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+.cart-modal-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff6347;
+}
+
+.cart-modal .close-btn {
+  color: #aaa;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.cart-modal .close-btn:hover,
+.cart-modal .close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Cart Item Styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item h4 {
+  font-size: 1.2em;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+
+.cart-item p {
+  font-size: 1.1em;
+  margin: 0 10px;
+  flex-grow: 1;
+}
+
+.quantity-btn, .remove-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s;
+}
+
+.quantity-btn:hover, .remove-btn:hover {
+  background-color: #ff4500;
+}
